@@ -43,8 +43,13 @@ body {
     margin-bottom: 1rem;
   }
   
-  #summary address {
+  #summary {
     font-weight: bold;
+  }
+
+  #summary #link{
+    text-decoration: None;
+    color:white;
   }
   
   #summary time {
@@ -64,4 +69,8 @@ body {
 
   main p{
     color:black;
+  }
+
+ .tag{
+    color:white;
   }
