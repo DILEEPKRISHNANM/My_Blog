@@ -1,0 +1,37 @@
+{%extends "base.html"%}
+{% load static %}
+
+{% block title %}
+
+    {{posts.title}}
+{%endblock%}
+
+
+{%block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post_details.css"%}" />
+    <link rel="stylesheet" href="{% static "blog/index.css"%}" />
+{%endblock%}
+
+
+{%block content%}
+    <section id="summary">
+            <h2>{{posts.title}}</h2>
+            <article>
+                <img src="{% static "blog/images/"|add:posts.image%}" alt="{{posts.title}}" />
+                <address>By {{posts.author|title}}</address>
+                <div>
+    
+    
+                    Last Upadated On <time>{{posts.date|date:"d M Y"}}</time>
+                </div>
+            </atricle>
+
+            <main>
+
+
+               <p>{{posts.content}}</p>
+            </main>
+            
+    </section>
+
+{%endblock%}

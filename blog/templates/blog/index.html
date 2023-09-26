@@ -1,0 +1,55 @@
+{%extends "base.html"%}
+{% load static %}
+
+{% block title %}
+
+    My Blog
+{%endblock%}
+
+
+{%block css_files %}
+    <link rel="stylesheet" href="{% static "blog/posts.css"%}" />
+    <link rel="stylesheet" href="{% static "blog/index.css"%}" />
+{%endblock%}
+
+
+{%block content%}
+
+   
+    <section id="welcome">
+
+
+        <header>
+            <img src="{% static "blog/images/20221165.jpg"%}" alt="profile" />
+            <h2>DILEEP KRISHNAN M</h2>
+
+        </header>
+        <p>Hi Im Dileep Krishnan M ,Who is the author of the blog.....</p>
+    </section>
+
+
+
+
+    <section id="latest-posts">
+
+
+        <h2>My Latest Tours </h2>
+
+        <ul>
+            {%for post in posts%}
+                {% include "blog/includes/post.html"%}
+            {% endfor %}
+        </ul>
+    </section>
+
+
+
+    <section id="about">
+
+
+        <h2>What I Do</h2>
+        <p>Im a professional software enginner who have a passion for riding and exploring, blogging.</p>
+    </section>
+
+
+{%endblock%}
